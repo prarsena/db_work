@@ -2,7 +2,8 @@
 ### Working with databases: sqlite, MongoDB
 
 **sqlite3** is a library that is built-in with Python 3. It's a serverless database. 
-The `sqlite.py` file is a fun little shell-based menu that allows you to add users
+
+The `sqlite.py` file is a shell-based menu script that allows you to add users
 to the "Employee" table (it pre-loads 29 entries before you add your first user).
 If you select "L" for Login, you are prompted to match a username with a password.
 If you get a match, you can enter a message, which is posted to the "Messages" table.
