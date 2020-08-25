@@ -28,9 +28,9 @@ After you add an entry, all documents in the collection are printed to the conso
 and creates the database, "new_test_db". It then adds five documents to the 
 created collection, "new_test_collection", and then prints those documents
 to the console using a cursor object. This file is meant to be used with the
-mongo shell using the >load("path/to/mongotest.js") command. 
+mongo shell using the `>load("path/to/mongotest.js")` command. 
 
-the **mongodb_java_driver** directory contains my work setting up the
+The **mongodb_java_driver** project directory contains my work setting up the
 MongoDB Java dependencies using Gradle. This was my first experience using Gradle
 to manage dependencies, so hopefully I added all the necessary files to my GitHub Repo.
 The `build.gradle` file fetches the dependencies from the mavenCentral() repo, and sets
@@ -39,4 +39,4 @@ some attributes for running the project.
 - The `src/main/accessmongo/Main.java` file uses these dependencies from Gradle to use the
 MongoDB Java libraries. The `Main.java` file adds many users to a collection, 
 and displays them to the console using a cursor object. From the root directory, 
-I run >gradle run which built the project and displayed the output to the console. 
+I run `>gradle run` which built the project and displayed the output to the console. 
