@@ -1,0 +1,26 @@
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.mongodb:mongodb-driver-sync:4.1.0-beta2'
+    implementation "org.slf4j:slf4j-api:2.0.0-alpha1"
+    implementation "org.slf4j:slf4j-nop:2.0.0-alpha1"
+}
+
+sourceSets {
+    main.java.srcDir "src/main"
+    test.java.srcDir "src/test"
+}
+
+jar {
+   manifest.attributes 'Main-Class': 'accessmongo.Main'
+}
+
+println getProject().getBuildDir()
+getProject().setBuildDir('target')
+println getProject().getBuildDir()
+
+mainClassName = "accessmongo.Main"
