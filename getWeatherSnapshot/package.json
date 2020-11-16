@@ -1,0 +1,15 @@
+{
+  "name": "getweathersnapshot",
+  "version": "1.0.0",
+  "description": "Use the openweathermap api to get current weather info and store it in a mongo collection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "peter arsenault",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.6.3",
+    "node-fetch": "^2.6.1"
+  }
+}

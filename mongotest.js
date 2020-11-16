@@ -21,40 +21,26 @@ while (cursor.hasNext()) {
 
 print("Number of documents in " + collection.getFullName() + ": " + collection.count());
 
+/*
+// understand mongodb auth:
+db = db.getSiblingDB('admin');
+db.createUser(
+    {
+        user: "myUserAdmin",
+        pwd: "password", // or cleartext password
+        roles: [{ role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase"]
+    }
+)
 
-/* note for the documentation:
-https://docs.mongodb.com/manual/tutorial/write-scripts-for-the-mongo-shell/
-for the load("path/to/file.js")
-the mongo shell does not support the Windows-style (backslash)
-filepaths. You must use forward slashes to specify the filepath
-even on Windows.
-*/
 
-/*  I notice when I add an "_id" field,
-    the printjson spits out something that isn't formatted like
-    the output present when I don't specify the "_id" field
-
-> load("D:/Sandbox/py/db_work/mongotest.js")
-Names of collections in database:
-new_test_collection
-{ "_id" : 1, "name" : "James Ken", "Occupation" : "Police Chief" }
-{ "_id" : 2, "name" : "James Ken", "Occupation" : "Police Chief" }
-{ "_id" : 3, "name" : "James Ken", "Occupation" : "Police Chief" }
-{ "_id" : 4, "name" : "James Ken", "Occupation" : "Police Chief" }
-{ "_id" : 5, "name" : "James Ken", "Occupation" : "Police Chief" }
-Number of documents in new_test_db.new_test_collection: 5
-true
-
-> db.dropDatabase()
-{ "dropped" : "new_test_db", "ok" : 1 }
-
-> load("D:/Sandbox/py/db_work/mongotest.js")
-Names of collections in database:
-{
-        "_id" : ObjectId("5f3dd268a4210146578af536"),
-        "name" : "James Ken",
-        "Occupation" : "Police Chief"
-}
-Number of documents in new_test_db.new_test_collection: 1
-true
+db = db.getSiblingDB('reporting');
+db.createUser({
+    user: "reportsUser",
+    pwd: "password",
+    roles: [
+        { role: "read", db: "test" },
+        { role: "read", db: "reporting" },
+        { role: "readWrite", db: "new_test_db" }
+    ]
+})
 */
