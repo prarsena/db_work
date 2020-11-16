@@ -7,8 +7,8 @@ The application then writes the current weather information (a weather "snapshot
 
 1. Create an account on [Open Weather Map] (https://openweathermap.org/api) to obtain an API key. This is free for personal use. The API key will be sent in an email from openweathermap. It can take up to an hour before the key is active.
 
-- Test the status of your API key by entering the following in a web browser:
-- https://api.openweathermap.org/data/2.5/onecall?lat=42.36&lon=-71.07&appid={your_api_key}.
+   - Test the status of your API key by entering the following in a web browser:
+   - https://api.openweathermap.org/data/2.5/onecall?lat=42.36&lon=-71.07&appid={your_api_key}.
 
 2. Clone this repository to your local environment.
 3. In your local environment, create a file in the same directory as `index.js` called `api_key.js` with the following text:
