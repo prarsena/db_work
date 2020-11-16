@@ -5,7 +5,7 @@ The application then writes the current weather information (a weather "snapshot
 
 ### Prerequisites
 
-1. Create an account on https://openweathermap.org/api to obtain an API key. This is free for personal use. The API key will be sent in an email from openweathermap. It can take up to an hour before the key is active.
+1. Create an account on [Open Weather Map] (https://openweathermap.org/api) to obtain an API key. This is free for personal use. The API key will be sent in an email from openweathermap. It can take up to an hour before the key is active.
 
 - Test the status of your API key by entering the following in a web browser: https://api.openweathermap.org/data/2.5/onecall?lat=42.36&lon=-71.07&exclude=minutely,hourly,daily&units=imperial&appid={your_api_key}.
 
@@ -28,12 +28,18 @@ The application then writes the current weather information (a weather "snapshot
    > node index.js
 
 3. Use the mongo shell to verify the document was added to the collection:
+
    > use weatherDB
-   > switched to db weatherDB
+
+   switched to db weatherDB
+
    > db.weatherCollection.count()
-   > 1
+
+   1
+
    > db.weatherCollection.find({})
-   > { "\_id" : 1, "date" : "11/15/2020", "time" : "11:41:08 PM", "temp" : 55.65, "feel" : 41.38, "description" : "mist" }
+
+   { "\_id" : 1, "date" : "11/15/2020", "time" : "11:41:08 PM", "temp" : 55.65, "feel" : 41.38, "description" : "mist" }
 
 ### Notes and Next steps
 
