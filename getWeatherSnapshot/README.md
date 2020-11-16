@@ -14,7 +14,7 @@ The application then writes the current weather information (a weather "snapshot
 3. In your local environment, create a file in the same directory as `index.js` called `api_key.js` with the following text:
 
    ```
-   const mysecretkey = "<i>enter_secret_key_here</i>";
+   const mysecretkey = "enter_api_key_here";
    module.exports = { mysecretkey }
    ```
 
