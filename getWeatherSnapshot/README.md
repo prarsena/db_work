@@ -1,3 +1,5 @@
+# getWeatherSnapshot
+
 getWeatherSnapshot is a node.js application that uses `node-fetch` and `mongodb` to fetch current weather information from `openweathermap.org`.
 The application then writes the current weather information (a weather "snapshot") to a Mongo DB collection (db: `weatherDB`; collection: `weatherCollection`).
 
