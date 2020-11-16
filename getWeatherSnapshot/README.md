@@ -29,12 +29,12 @@ The application then writes the current weather information (a weather "snapshot
 
 3. Use the mongo shell to verify the document was added to the collection:
 
-   > &gt;use weatherDB
-   > switched to db weatherDB
-   > &gt;db.weatherCollection.count()
-   > 1
-   > &gt;db.weatherCollection.find({})
-   > { "\_id" : 1, "date" : "11/15/2020", "time" : "11:41:08 PM", "temp" : 55.65, "feel" : 41.38, "description" : "mist" }
+   &gt;use weatherDB
+   switched to db weatherDB
+   &gt;db.weatherCollection.count()
+   1
+   &gt;db.weatherCollection.find({})
+   { "\_id" : 1, "date" : "11/15/2020", "time" : "11:41:08 PM", "temp" : 55.65, "feel" : 41.38, "description" : "mist" }
 
 ### Notes and Next steps
 
