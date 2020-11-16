@@ -21,20 +21,24 @@ The application then writes the current weather information (a weather "snapshot
 
 1. In a terminal, build the project dependencies:
 
+   ```
    > npm install index.js
+   ```
 
 2. Run the index.js file:
 
+   ```
    > node index.js
+   ```
 
 3. Use the mongo shell to verify the document was added to the collection:
 
    ```
-   &gt;use weatherDB
+   >use weatherDB
    switched to db weatherDB
-   &gt;db.weatherCollection.count()
+   >db.weatherCollection.count()
    1
-   &gt;db.weatherCollection.find({})
+   >db.weatherCollection.find({})
    { "\_id" : 1, "date" : "11/15/2020", "time" : "11:41:08 PM", "temp" : 55.65, "feel" : 41.38, "description" : "mist" }
    ```
 
